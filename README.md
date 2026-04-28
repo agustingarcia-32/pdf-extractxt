@@ -17,12 +17,12 @@ Para que la aplicación funcione correctamente en su entorno local, siga estos p
 git clone <URL_DE_VUESTRO_REPOSITORIO>
 cd PDF-TEXT-EXTRACTOR
 
-2. Instalación de dependencias con uv
+### 2. Instalación de dependencias con uv
 Utilizamos uv para garantizar que las versiones de las librerías sean idénticas en cualquier computadora.
 # Sincroniza el entorno virtual e instala todas las dependencias
 uv sync
 
-3. Configuración de Variables de Entorno
+### 3. Configuración de Variables de Entorno
 El sistema requiere una conexión a MongoDB y claves de configuración.
 # Crear el archivo .env a partir de la plantilla
 cp .env.example .env  # En Windows: copy .env.example .env
@@ -31,11 +31,11 @@ cp .env.example .env  # En Windows: copy .env.example .env
 # MONGODB_URL (ej: mongodb://localhost:27017)
 # DATABASE_NAME
 
-4. Ejecución de la Suite de Tests (TDD)
+### 4. Ejecución de la Suite de Tests (TDD)
 Antes de iniciar el servidor, puede verificar que todos los requisitos funcionales pasan las pruebas:
 uv run pytest
 
-5. Iniciar Servidor de Desarrollo
+### 5. Iniciar Servidor de Desarrollo
 Una vez configurado el entorno, ejecute el siguiente comando para levantar la API:
 uv run uvicorn src.main:app --reload
 ```
