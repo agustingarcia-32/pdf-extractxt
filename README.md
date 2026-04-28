@@ -8,21 +8,35 @@
 
 ---
 
-## Quick Start
-
+## Instrucciones para Ejecución
 ```bash
-# 1. Sincronizar el proyecto (crea el entorno virtual e instala dependencias)
+Para que la aplicación funcione correctamente en su entorno local, siga estos pasos:
+
+### 1. Clonar el repositorio
+```bash
+git clone <URL_DE_VUESTRO_REPOSITORIO>
+cd PDF-TEXT-EXTRACTOR
+
+2. Instalación de dependencias con uv
+Utilizamos uv para garantizar que las versiones de las librerías sean idénticas en cualquier computadora.
+# Sincroniza el entorno virtual e instala todas las dependencias
 uv sync
 
-# 2. Configurar variables de entorno
+3. Configuración de Variables de Entorno
+El sistema requiere una conexión a MongoDB y claves de configuración.
+# Crear el archivo .env a partir de la plantilla
 cp .env.example .env  # En Windows: copy .env.example .env
-# IMPORTANTE: Editar .env con tus credenciales de MongoDB
 
-# 3. Ejecutar tests (Metodología TDD)
+# IMPORTANTE: Abrir el archivo .env y completar los valores de:
+# MONGODB_URL (ej: mongodb://localhost:27017)
+# DATABASE_NAME
+
+4. Ejecución de la Suite de Tests (TDD)
+Antes de iniciar el servidor, puede verificar que todos los requisitos funcionales pasan las pruebas:
 uv run pytest
 
-# 4. Iniciar servidor de desarrollo
-# (Ajustado a la ubicación de tu main.py en src/)
+5. Iniciar Servidor de Desarrollo
+Una vez configurado el entorno, ejecute el siguiente comando para levantar la API:
 uv run uvicorn src.main:app --reload
 ```
 ## Arquitectura Elegida
