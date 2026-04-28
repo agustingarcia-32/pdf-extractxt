@@ -42,20 +42,20 @@ uv run uvicorn src.main:app --reload
 ## Arquitectura Elegida
 Este proyecto implementa Clean Architecture estructurada en las 3 capas que se observan en nuestro directorio src/:
 
-API (Entrada): Manejo de protocolos HTTP, validación de esquemas (Pydantic) y gestión de errores.
+- API (Entrada): Manejo de protocolos HTTP, validación de esquemas (Pydantic) y gestión de errores.
 
-Core (Negocio): Casos de uso y lógica de dominio independiente de herramientas externas.
+- Core (Negocio): Casos de uso y lógica de dominio independiente de herramientas externas.
 
-Infrastructure (Datos): Implementaciones concretas de base de datos NoSQL y cliente de extracción de PDF.
+- Infrastructure (Datos): Implementaciones concretas de base de datos NoSQL y cliente de extracción de PDF.
 
-Principios de Ingeniería Aplicados
-TDD (Test Driven Development): Estructura de pruebas espejo en la carpeta tests/.
+## Principios de Ingeniería Aplicados
+- TDD (Test Driven Development): Estructura de pruebas espejo en la carpeta tests/.
 
-SOLID & Clean Code: Responsabilidad única y código legible.
+- SOLID & Clean Code: Responsabilidad única y código legible.
 
-12-Factor App: Gestión de configuración externa.
+- 12-Factor App: Gestión de configuración externa.
 
-Workflow Profesional: Uso de ISSUE_TEMPLATE y pull_request_template en .github/.
+- Workflow Profesional: Uso de ISSUE_TEMPLATE y pull_request_template en .github/.
 
 ## Estructura del Proyecto (VS Code Tree)
 ```
