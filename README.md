@@ -24,8 +24,8 @@ uv run pytest
 # 4. Iniciar servidor de desarrollo
 # (Ajustado a la ubicación de tu main.py en src/)
 uv run uvicorn src.main:app --reload
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-Arquitectura Elegida
+```
+## Arquitectura Elegida
 Este proyecto implementa Clean Architecture estructurada en las 3 capas que se observan en nuestro directorio src/:
 
 API (Entrada): Manejo de protocolos HTTP, validación de esquemas (Pydantic) y gestión de errores.
@@ -42,9 +42,9 @@ SOLID & Clean Code: Responsabilidad única y código legible.
 12-Factor App: Gestión de configuración externa.
 
 Workflow Profesional: Uso de ISSUE_TEMPLATE y pull_request_template en .github/.
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-Estructura del Proyecto (VS Code Tree)
 
+## Estructura del Proyecto (VS Code Tree)
+```
 PDF-TEXT-EXTRACTOR/
 ├── .github/                # Configuración de GitHub (Templates de PR e Issues)
 ├── src/                    # Código fuente
@@ -65,9 +65,9 @@ PDF-TEXT-EXTRACTOR/
 ├── .env.example            # Configuración de entorno
 ├── pyproject.toml          # Dependencias (uv)
 └── README.md
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-# Tests con cobertura
+```
+## Tests con cobertura
 uv run pytest --cov=src
 
-# Linter y Formateo
+## Linter y Formateo
 uv run ruff check src/
