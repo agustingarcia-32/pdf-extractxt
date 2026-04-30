@@ -12,7 +12,7 @@ Esta capa actúa como el punto de entrada de la aplicación. Maneja las solicitu
    - Formatear respuestas HTTP
    - Manejar errores de manera consistente
 
-2. **Acoplamiento Débil**: Si mañana decides cambiar de FastAPI a otro framework (Flask, Django REST), solo necesitas modificar esta capa.
+2. **Acoplamiento Débil**: Si mañana queremos cambiar de FastAPI a otro framework (Flask, Django REST), solo necesitas modificar esta capa.
 
 3. **Testabilidad**: Puedes probar la lógica de negocio sin levantar un servidor HTTP.
 
